@@ -1,0 +1,23 @@
+{
+  "name": "patt-me-blog",
+  "scripts": {
+    "build": "NODE_ENV=production eleventy",
+    "lint": "prettier --check .",
+    "lint:fix": "prettier --write .",
+    "start": "eleventy --serve"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^0.11.1",
+    "husky": "^4.3.5",
+    "prettier": "^2.2.1",
+    "pretty-quick": "^3.1.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged"
+    }
+  },
+  "volta": {
+    "node": "14.15.1"
+  }
+}

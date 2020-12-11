@@ -1,0 +1,13 @@
+---
+layout: root.ejs
+title: Jake Patterson
+---
+
+<% [...collections.blog].reverse().forEach(function(blog) { %>
+<h3>
+  <a href="<%- blog.url %>"> <%- blog.data.title -%> </a>
+</h3>
+<p>
+  <%- new Intl.DateTimeFormat('en', { dateStyle: 'long' }).format(blog.date) %>
+</p>
+<% }); %>

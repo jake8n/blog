@@ -1,27 +1,39 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title><%- title %></title>
-  <link rel="stylesheet" href="https://fonts.xz.style/serve/inter.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@exampledev/new.css@1.1.2/new.min.css">
-  <% if (process.env.NODE_ENV === 'production') { %>
-    <script src="https://cdn.jsdelivr.net/npm/turbolinks@5.2.0/dist/turbolinks.min.js" defer></script>
-    <script src="https://vampirebat.jake8n.com/script.js" data-site="MMXYPMXJ" defer></script>
-  <% } %>
-</head>
-<body>
-  <header>
-    <h1>jake8n</h1>
-    <nav>
-      <a href="/">Blog</a>
-      /
-      <a href="https://github.com/jake8n">GitHub</a>
-      /
-      <a href="https://twitter.com/jake8n">Twitter</a>
-    </nav>
-  </header>
-  <%- content %>
-</body>
+<html lang="en-GB">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%- title %></title>
+    <link rel="stylesheet" href="https://fonts.xz.style/serve/inter.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@exampledev/new.css@1.1.2/new.min.css"
+    />
+    <% if (process.env.NODE_ENV === 'production') { %>
+    <script
+      src="https://cdn.jsdelivr.net/npm/turbolinks@5.2.0/dist/turbolinks.min.js"
+      defer
+    ></script>
+    <script
+      src="https://vampirebat.jake8n.com/script.js"
+      data-site="MMXYPMXJ"
+      defer
+    ></script>
+    <% } %> <% if (page.url.includes("blog")) { %>
+    <link rel="canonical" href="https://jake8n.com<%- page.url -%>" />
+    <% } %>
+  </head>
+  <body>
+    <header>
+      <h1>jake8n</h1>
+      <nav>
+        <a href="/">Blog</a>
+        /
+        <a href="https://github.com/jake8n">GitHub</a>
+        /
+        <a href="https://twitter.com/jake8n">Twitter</a>
+      </nav>
+    </header>
+    <%- content %>
+  </body>
 </html>
